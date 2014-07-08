@@ -1,0 +1,11 @@
+<%= form_for @post do |post| %>
+
+<%= post.label :title %>
+<%= post.text_field :title%>
+
+<%= post.label :description %>
+<%= post.text_area :description %>
+
+<%= post.submit 'Post it!'%>
+
+<% end %>
