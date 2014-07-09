@@ -38,5 +38,16 @@ describe 'posts creation' do
 		expect(current_path).to eq '/posts'
 		expect(page).to have_content 'Cool post.'
 	end
+
+	it 'user can add a photo to posts' do
+		visit 'posts/new'
+		fill_in 'Title', with: 'Post1'
+		fill_in 'Description', with: 'Cool post.'
+		attach_file 'Image', Rails.root.join('spec/images/pizza.jpg')
+		click_button 'Post it!'
+		expect(current_path).to eq '/posts'
+		expect(page).to have_css 'img.uploaded-pic'
+
+	end
 end
 

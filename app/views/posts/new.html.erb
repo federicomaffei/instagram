@@ -1,10 +1,13 @@
-<%= form_for @post do |post| %>
+<%= form_for @post, :html => { :multipart => true } do |post| %>
 
 <%= post.label :title %>
 <%= post.text_field :title%>
 
 <%= post.label :description %>
-<%= post.text_area :description %>
+<%= post.text_area  :description %>
+
+<%= post.label :image %>
+<%= post.file_field :image %>
 
 <%= post.submit 'Post it!'%>
 

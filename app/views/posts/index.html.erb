@@ -2,6 +2,7 @@
 	<% @posts.each do |post| %>
 		<h1><%=post.title %></h1>
 		<p><%= post.description %></p><br>
+		<p><%= image_tag post.image.url, class: 'uploaded-pic'%></p><br>
 	<% end %>
 <% else %>
 	<h1>No posts yet.</h1><br>
