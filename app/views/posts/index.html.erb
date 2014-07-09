@@ -1,10 +1,24 @@
-<% if @posts.any? %>
-	<% @posts.each do |post| %>
-		<h1><%=post.title %></h1>
-		<p><%= post.description %></p><br>
-		<p><%= image_tag post.image.url, class: 'uploaded-pic'%></p><br>
-	<% end %>
-<% else %>
-	<h1>No posts yet.</h1><br>
-<% end %>
-<%=	 link_to 'New Post', new_post_path %>
+    <div class="jumbotron">
+    	<div class='container'>
+    	<h1>Welcome to Pizzagram.</h1>
+    		<p>This is a website that includes amazing pictures of pizzas of all flavours. Buonissimo.</p>
+    		<p><a class="btn btn-primary btn-lg" role="button">Learn more &raquo;</a></p>
+    	</div>
+    </div>
+    <div class="container">
+    	<% if @posts.any? %>
+    	<div class="row">
+    		<% @posts.each do |post| %>
+    		<div class='col-md-4'>
+    			<h1><%=post.title %></h1>
+    			<p><%= post.description %></p><br>
+    			<p><%= image_tag post.image.url, class: 'uploaded-pic'%></p><br>
+    			<p>Posted by: <%= post.user.email %></p>
+    		</div>
+    		<% end %>
+    	</div>
+    	<% else %>
+    	<h1>No posts yet.</h1><br>
+    	<% end %>
+    	<%=	 link_to 'New Post', new_post_path %>
+    </div>

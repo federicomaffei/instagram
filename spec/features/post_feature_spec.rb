@@ -23,7 +23,8 @@ describe 'posts index page' do
 	context 'shows a post' do
 
 		before do
-			Post.create(title: 'Post1', description: 'Cool post.')
+			user = User.create email: 'prova@prova.net', password: '12345678', password_confirmation: '12345678'
+			user.posts.create(title: 'Post1', description: 'Cool post.')
 		end
 
 		it 'shows the post by name' do
@@ -69,6 +70,7 @@ describe 'posts creation' do
 			attach_file 'Image', Rails.root.join('spec/images/pizza.jpg')
 			click_button 'Post it!'
 			expect(current_path).to eq '/posts'
+			expect(page).to have_content 'Posted by: prova@prova.net'
 			expect(page).to have_css 'img.uploaded-pic'
 
 		end
