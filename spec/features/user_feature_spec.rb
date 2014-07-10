@@ -7,11 +7,11 @@ describe 'users registration/login' do
 		it 'can sign up' do
 			visit '/users/sign_up'
 			within '.new_user' do
-				fill_in 'Email', with: 'prova@prova.net', :match => :first
-				fill_in 'Password', with: '12345678', :match => :first
+				fill_in 'Email', with: 'prova@prova.net'
+				fill_in 'Password', with: '12345678'
 				fill_in 'Password confirmation', with: '12345678'
 				click_button 'Sign up'
-				
+
 			end
 			expect(page).to have_content 'signed up successfully'
 		end

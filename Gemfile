@@ -24,14 +24,11 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'paperclip', github: 'thoughtbot/paperclip'
-
 gem 'autoprefixer-rails'
-
 gem 'aws-sdk'
-
 gem 'devise'
-
 gem 'bootstrap-sass'
+gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
