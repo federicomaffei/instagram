@@ -11,10 +11,14 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(params.require(:post).permit(:title, :description, :image))
+		@post = Post.new(params.require(:post).permit(:title, :description, :image, :tag_names))
 		@post.user = current_user
 		@post.save
 		redirect_to '/posts'
+	end
+
+	def show
+		@post = Post.find_by_title(params[:id])
 	end
 
 end

@@ -39,6 +39,8 @@
 				</div>
 
 				<%= f.button "Sign in", class: 'btn btn-success' %>
+
+				<%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "btn btn-info" %>
 				
 				<% end %>
 			</div><!--/.navbar-collapse --> 
@@ -46,14 +48,16 @@
 	</div>
 
 	<%= yield %>
-	<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+	
 
 	<div class="container">
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 		<!-- Example row of columns -->
 		<hr>
 		<footer>
 			<p>&copy; federicomaffei2014</p>
+			
 		</footer>
 	</div> <!-- /container -->
 
