@@ -9,11 +9,13 @@
 <%end%>
 <div class="container">
     <% if @posts.any? %>
-    <div class="row">
-        <%=render @posts%>
+    <% @posts.in_groups_of(3, false).each do |post_triplet| %>
+    <div class='row'>
+        <%=render post_triplet %>
     </div>
+    <% end %>
     <% else %>
-    <h1>No posts yet.</h1><br>
+    <h1>No posts yet.</h1><br>  
     <% end %>
     <%= link_to 'New Post', new_post_path, class:"btn btn-warning btn-lg" %>
 </div>

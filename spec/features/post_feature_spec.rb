@@ -67,6 +67,7 @@ describe 'posts creation' do
 			visit 'posts/new'
 			fill_in 'Title', with: 'Post1'
 			fill_in 'Description', with: 'Cool post.'
+			fill_in 'Address', with: '25 City Road, London'
 			attach_file 'Image', Rails.root.join('spec/images/pizza.jpg')
 			click_button 'Post it!'
 			expect(current_path).to eq '/posts'
