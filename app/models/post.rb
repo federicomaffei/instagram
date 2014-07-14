@@ -1,5 +1,5 @@
 class Post < ActiveRecord::Base
-	has_attached_file :image, :styles => { :medium => "100x100>" }, storage: :s3,
+	has_attached_file :image, :styles => { :medium => "100x100>" }, :default_url => 'https://dl.dropboxusercontent.com/u/9315601/missing.png', storage: :s3,
 	:s3_credentials => {
 		bucket: 'pizzagram',
 		access_key_id: Rails.application.secrets.s3_access_key,

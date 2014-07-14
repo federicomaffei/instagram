@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
 
-  root to: "posts#index"
   devise_for :users
+  devise_for :admins
+
+  root to: "posts#index"
   resources :posts do
     resource :map
   end
 
-
+  resources :orders
   resources :tags
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
