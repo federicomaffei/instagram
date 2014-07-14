@@ -1,9 +1,11 @@
+<div class='container'>
 <% if @orders.any? %>
 	<% @orders.each do |order| %>
-		<%= order.user.email %>
-		<%= link_to order.post.title, '/posts' %>
-		<%# order.number %>
+		<p>Order n° <%= order.number %></p>
+		<p>Email: <%= order.user.email %></p>
+		<P>Item: <%= link_to order.post.title, '/posts' %></P>
 	<% end %>
 <% else %>
-No orders received yet.
+<h2>No orders received yet.</h2>
 <%end %>
+</div>

@@ -1,4 +1,4 @@
 	<div class='container'>
 	<h1>Geocoding of post:</h1>
-	<div id='map' data-id=<%= @post.title %>></div>	
+	<div id='map' data-id=<%= @post.title.gsub(/\s+/, "%20") %>></div>	
 </div>	
