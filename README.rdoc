@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application, built during week 9 at [Makers Academy], has the puropse of recreating the famous social media Instagram, limited to a browser and focused on a thing I like a lot: PIZZA.
 
-Things you may want to cover:
+User stories:
 
-* Ruby version
+* A user can subscribe via devise, log in and post a photo, complete with title, tag and location.
 
-* System dependencies
+* An unlogged user navigates through pictures, tags and maps but is unable to post pictures. A very good looking banner of a big pizza is shown, though, to encourage subscription.
 
-* Configuration
+* An admin can sell hardcopy versions of the photos to users, have the orders listed in a page and the payments handled by spring.
 
-* Database creation
+Front end styling done with Bootstrap.
 
-* Database initialization
+Testing technologies used:
 
-* How to run the test suite
+* Rspec
 
-* Services (job queues, cache servers, search engines, etc.)
+* Capybara
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* PhantomJS / Poltergeist

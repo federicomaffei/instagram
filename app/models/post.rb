@@ -20,7 +20,7 @@ class Post < ActiveRecord::Base
 	end
 
 	def to_param
-		title
+		title.gsub(" ", "_")
 	end
 
 end

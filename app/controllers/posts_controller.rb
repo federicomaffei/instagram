@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 	end
 
 	def show
-		@post = Post.find_by_title(params[:id])
+		@post = Post.find_by_title(params[:id].gsub("_", " "))
 	end
 
 end
