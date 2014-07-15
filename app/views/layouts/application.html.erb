@@ -26,7 +26,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button> 
-				<a class="navbar-brand" href="#">Pizzagram</a>
+				<a class="navbar-brand" href="<%=root_path%>">Pizzagram</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<%= form_for(User.new, as: :user, url: session_path(:user), html: {class:"navbar-form navbar-right"}) do |f| %>
