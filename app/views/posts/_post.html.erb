@@ -11,6 +11,7 @@
                 <% end %></p>
                 <% unless post.address.blank? %>
                 <%= link_to 'Map', post_map_path(post), class: 'btn btn-success' %>
+                <%= link_to 'BUY!', new_post_charge_path(post), class: 'btn btn-success' %>
                 <% end %>
             </div>
             <div class="panel-footer"><p>Posted by: <%= post.user.email %></p>

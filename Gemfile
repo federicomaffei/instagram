@@ -38,6 +38,7 @@ gem 'spring', group: :development
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'capybara-email'
   gem 'database_cleaner'
   gem 'poltergeist'
   gem 'capybara-screenshot'

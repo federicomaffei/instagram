@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 describe 'orders page' do
-	let(:post) {Post.new title: 'Test picture'}
-	let(:admin) {Admin.new email: 'admin@admin.com', password: '12345678', password_confirmation: '12345678'}
-	let(:user) {User.new email: 'customer@yo.com', password: '12345678', password_confirmation: '12345678'}
+	let(:post) {Post.create title: 'Test picture'}
+	let(:admin) {Admin.create email: 'admin@admin.com', password: '12345678', password_confirmation: '12345678'}
+	let(:user) {User.create email: 'customer@yo.com', password: '12345678', password_confirmation: '12345678'}
 
 	context 'logged as an admin' do
 
@@ -38,5 +38,17 @@ describe 'orders page' do
 			end
 		end
 
+	end
+
+	describe 'email confirmation' do
+		before do
+			clear_emails
+		end
+
+		it 'is sent when an order is created' do
+			Order.create(post: post, user: user)
+			open_email('customer@yo.com')
+			expect(current_email).to have_content 'Order successful!'
+		end
 	end
 end

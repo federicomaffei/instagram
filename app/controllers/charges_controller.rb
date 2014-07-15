@@ -1,7 +1,8 @@
 class ChargesController < ApplicationController
+  before_action :authenticate_user!
 
 	def new
-		@post = Post.find(params[:post_id])
+		@post = Post.find_by_title(params[:post_id].gsub("_", " "))
 	end
 
 	def create
