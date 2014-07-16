@@ -11,9 +11,10 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require_tree .
+//= require jquery_ujs 
 //= require jquery
 //= require bootstrap-sprockets
 //= require bootstrap-tagsinput
 //= require gmaps
+//= require websocket_rails/main
+//= require_tree .

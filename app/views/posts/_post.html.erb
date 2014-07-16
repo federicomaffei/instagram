@@ -13,8 +13,9 @@
                 <%= link_to 'Map', post_map_path(post), class: 'btn btn-success' %>
                 <%= link_to 'BUY!', new_post_charge_path(post), class: 'btn btn-success' %>
                 <% end %>
+                <%= link_to "❤ #{post.likes.count}", post_likes_path(post), class: 'btn btn-warning like-btn', data: { 'post-id'=> post.id } %> 
             </div>
             <div class="panel-footer"><p>Posted by: <%= post.user.email %></p>
             </div>
         </div>    
-    </div>
+    </div>      

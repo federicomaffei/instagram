@@ -13,12 +13,16 @@ class ChargesController < ApplicationController
   		charge = Stripe::Charge.create(
   			:customer    => customer.id,
   			:amount      => @amount,
-  			:description => 'Rails Stripe customer',
+  			:description => 'Print of #{@post.title}',
   			:currency    => 'usd'
   			)
   		Order.create(user: current_user, post: @post)
+
+      flash[:notice] = 'Thanks for THA CASH.'
+      redirect_to posts_path
+
   	rescue Stripe::CardError => e
   		flash[:error] = e.message
   		redirect_to charges_path(@post)
   	end
-  end
+  end 

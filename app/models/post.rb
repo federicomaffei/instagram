@@ -8,6 +8,7 @@ class Post < ActiveRecord::Base
 	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 	belongs_to :user
 	has_and_belongs_to_many :tags
+	has_many :likes
 
 	def tag_names
 		# tags.map(&:name).join(', ')

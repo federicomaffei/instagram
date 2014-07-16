@@ -31,6 +31,8 @@ gem 'bootstrap-sass'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 gem 'byebug'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'websocket-rails'
+gem 'thin'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring', group: :development
