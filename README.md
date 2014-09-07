@@ -35,7 +35,7 @@ To quickly improve the look of our site, we used a popular CSS framework - [Twit
 	* Improved forms
 	* Full-sized images appear in modals
 
-##Tagging (third iteration)
+###Tagging (third iteration)
 For the third iteration, we added the ability for photos to be tagged, as in the original Instagram, using a [many-to-many relationship](http://guides.rubyonrails.org/association_basics.html#the-has-and-belongs-to-many-association). Given the relative complexity of our tags implementation, we set up unit tests to ensure we've covered all the various edge cases. The features developed via TDD in this iteration are:
 
 	* Users can specify a list of space-separated (or comma separated tags) - e.g. "#yolo, #swag".
