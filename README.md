@@ -1,7 +1,7 @@
 Pizzagram
 ====================
 
-This application, built during week 9 and 10 at [Makers Academy](http://www.makersacademy.com), has the puropse of recreating the famous social media Instagram, with a slight Pizza flavor. It's reachable on [Heroku](http://pizzagrams.herokuapp.com/). This project has enhanced my knowledge of more advanced Rails topics:
+This application, built during week 9 and 10 at [Makers Academy](http://www.makersacademy.com), has the purpose of recreating the famous social media Instagram, with a slight Pizza flavor. It's reachable on [Heroku](http://pizzagrams.herokuapp.com/). This project has enhanced my knowledge of more advanced Rails topics:
 
 * Uploading and processing images using Paperclip, hosting via Amazon S3
 * Managing secret information (e.g. private keys)
