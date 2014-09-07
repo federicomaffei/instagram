@@ -1,20 +1,33 @@
+<div class='container'>
+<div class="page-header">
+  <h1>New pizza image! <small>Please let it be tasty.</small></h1>
+</div>
 <%= form_for @post, :html => { :multipart => true } do |post| %>
-
-<%= post.label :title %>
+<ul class='list-group'>
+<li class='list-group-item'>
+<h4 class="list-group-item-heading"><%= post.label :title %></h4>
 <%= post.text_field :title%>
-
-<%= post.label :description %>
+</li>
+<li class='list-group-item'>
+<h4 class="list-group-item-heading"><%= post.label :description %></h4>
 <%= post.text_area  :description %>
-
-<%= post.label :image %>
+</li>
+<li class='list-group-item'>
+<h4 class="list-group-item-heading"><%= post.label :image %></h4>
 <%= post.file_field :image %>
-
-<%= post.label :tag_names, 'Tags' %>
-<%= post.text_field :tag_names, data: {role: 'tagsinput'}%>
-
-<%= post.label :address, "Address" %>
+</li>
+<li class='list-group-item'>
+<h4 class="list-group-item-heading"><%= post.label :tag_names, 'Tags' %></h4>
+<%= post.text_field :tag_names, data: {role: 'tagsinput'}%>	
+</li>
+<li class='list-group-item'>
+<h4 class="list-group-item-heading"><%= post.label :address, "Address" %></h4>
 <%= post.text_area :address %>
-
+</li>
+<li class='list-group-item'>
 <%= post.submit 'Post it!' %>
+</li>
+</ul>
 
 <% end %>
+</div>

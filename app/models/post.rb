@@ -1,4 +1,4 @@
-class Post < ActiveRecord::Base
+	class Post < ActiveRecord::Base
 	has_attached_file :image, :styles => { :medium => "100x100>" }, :default_url => 'https://dl.dropboxusercontent.com/u/9315601/missing.png', storage: :s3,
 	:s3_credentials => {
 		bucket: 'pizzagram',

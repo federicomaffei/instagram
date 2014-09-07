@@ -33,7 +33,7 @@ gem 'byebug'
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 gem 'websocket-rails'
 gem 'thin'
-gem 'factory_girl_rails'
+gem 'factory_girl_rails		'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring', group: :development
