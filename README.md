@@ -55,3 +55,44 @@ As a third iteration, the service has been made location-aware. The features dev
 	* A clickable marker should be pinned at the location of the photo. Clicking it displays the photo's title and `created_at` date.
 	* Use the Geolocation API to prefill the address field with the user's current address.
 
+====================
+
+###The programming languages and technologies I used are:
+
+  * Ruby
+
+  * Javascript / JQuery
+
+  * Rails framework
+
+  * Rspec
+
+  * Capybara
+
+  * PhantomJS / Poltergeist
+
+  * AJAX
+
+  * JBuilder
+
+  * SCSS
+
+  * Google Maps API
+
+====================
+
+###How to run the application:
+
+  * In the browser enter: [http://pizzagram.herokuapp.com/](http://pizzagram.herokuapp.com/)
+
+###How to test the application:
+
+  * From command line enter:
+```bash
+git clone git@github.com:federicomaffei/pizzagram.git
+cd pizzagram
+rspec
+```
+
+====================
+
