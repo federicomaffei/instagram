@@ -7,11 +7,12 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href="../../favicon.ico">
-
 	<title>Pizzagram</title>
 	<script src='http://maps.google.com/maps/api/js?sensor=true'></script>
 	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
 	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<link href='http://fonts.googleapis.com/css?family=Lobster+Two:700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,300' rel='stylesheet' type='text/css'>
 	<%= csrf_meta_tags %>
 </head>
 
@@ -34,13 +35,10 @@
 				<div class="form-group">
 					<%= f.email_field :email, placeholder: 'Email', class: 'form-control' %>
 				</div>
-
 				<div class="form-group">
 					<%= f.password_field :password, placeholder: 'Password', class: 'form-control' %>
 				</div>
-
 				<%= f.button "Sign in", class: 'btn btn-success' %>
-				
 				<% end %>
 				<% else %>
 				<%= form_for(User.new, as: :user, url: session_path(:user), html: {class:"navbar-form navbar-right"}) do |f| %>
@@ -57,7 +55,6 @@
 	</div>
 
 	<%= yield %>
-	
 
 	<div class="container">
 		<p class="notice"><%= notice %></p>
@@ -65,11 +62,14 @@
 		<!-- Example row of columns -->
 		<hr>
 		<footer>
-			<p>&copy; federicomaffei2014</p>
-			
+			<span>&copy; 2014 federico maffei </span>
+			<span>-</span>
+			<a href="https://github.com/federicomaffei/">github</a>
+			<span>-</span>
+			<a href="federico.maffei@gmail.com">contact me</a>
 		</footer>
 	</div> <!-- /container -->
-
 </body>
+
 </html>
 

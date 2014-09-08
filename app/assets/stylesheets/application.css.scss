@@ -20,11 +20,27 @@
 
  body {
  	padding-top: 60px;
+ 	font-family: 'Roboto';
+ }
+
+ .navbar-inverse {
+ 	background-color: #fff;
+ 	border-bottom-width: 0px;
+ 	color: none;
+ }
+
+ .navbar-brand {
+ 	font-family: 'Lobster Two';
+ 	font-size: 27px;
+ 	color: black;
+
+ 	&:hover {
+ 		color: black;
+ 	}
  }
 
  .jumbotron {
  	background: image-url('pizza_back.jpg');
- 	background-size: cover;
 
  	.container {
  		background: rgba(255, 255, 255, 0.8);
