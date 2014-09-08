@@ -62,6 +62,13 @@ As a fourth iteration we added the ability to "like" a post. The features develo
 	* The new "like" is immediately shown on all of the open instances of the page, via [Websockets](https://github.com/websocket-rails/websocket-rails).
 	* A user can only like a post once.
 
+###Order page and Stripe payment functionality (fifth iteration)
+As a fifth iteration the ability to sell prints of the pictures has been added. The features developed via TDD in this iteration are:
+	
+	* An Order show the email of the customer, an order number and the product name.
+	* An Admin can see the all the details of all the placed Orders. The Admin cannot sign up, only be added via seeding.
+	* Users can place Orders, and pay for the placed order. A confirmation email is sent to the customer.
+
 ====================
 
 ###The programming languages and technologies I used are:
@@ -85,6 +92,8 @@ As a fourth iteration we added the ability to "like" a post. The features develo
   * SCSS
 
   * Google Maps API
+
+  * Stripe
 
 ====================
 
