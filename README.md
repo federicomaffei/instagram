@@ -55,6 +55,13 @@ As a third iteration, the service has been made location-aware. The features dev
 	* A clickable marker should be pinned at the location of the photo. Clicking it displays the photo's title and `created_at` date.
 	* Use the Geolocation API to prefill the address field with the user's current address.
 
+###Websocket "like" functionality (fourth iteration)
+As a fourth iteration we added the ability to "like" a post. The features developed via TDD in this iteration are:
+
+	* Users can like a post.
+	* The new "like" is immediately shown on all of the open instances of the page, via [Websockets](https://github.com/websocket-rails/websocket-rails).
+	* A user can only like a post once.
+
 ====================
 
 ###The programming languages and technologies I used are:
