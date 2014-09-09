@@ -4,18 +4,20 @@
             <h3 class="panel-title"><h1><%=post.title %></h1></h3>
         </div>
         <div class="panel-body">
-            <p><%= post.description %></p><br>
-            <p><%= image_tag post.image.url, class: 'uploaded-pic'%></p><br>
-            <p><% post.tags.each do |tag| %>
-                <%= link_to tag.name, tag_path(tag)%>
-                <% end %></p>
-                <% unless post.address.blank? %>
-                <%= link_to 'Map', post_map_path(post), class: 'btn btn-success' %>
-                <%= link_to 'BUY!', new_post_charge_path(post), class: 'btn btn-success' %>
-                <% end %>
-                <%= link_to "❤ #{post.likes.count}", post_likes_path(post), class: 'btn btn-warning like-btn', data: { 'post-id'=> post.id } %> 
-            </div>
-            <div class="panel-footer"><p>Posted by: <%= post.user.email %></p>
-            </div>
+            <ul class="post-body">
+                <p><%= post.description %></p><br>
+                <p><%= image_tag post.image.url, class: 'uploaded-pic'%></p><br>
+                <p><% post.tags.each do |tag| %>
+                    <%= link_to tag.name, tag_path(tag)%>
+                    <% end %></p>
+                    <% unless post.address.blank? %>
+                    <%= link_to 'Map', post_map_path(post), class: 'btn btn-success' %>
+                    <%= link_to 'BUY!', new_post_charge_path(post), class: 'btn btn-success' %>
+                    <% end %>
+                    <%= link_to "❤ #{post.likes.count}", post_likes_path(post), class: 'btn btn-warning like-btn', data: { 'post-id'=> post.id } %> 
+                </div>
+                <div class="panel-footer"><p>Posted by: <%= post.user.email %></p>
+                </div>
+            </ul>
         </div>    
     </div>      

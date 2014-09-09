@@ -40,9 +40,13 @@
  	}
  }
 
+ .post-body {
+ 	text-align: center;
+ 	-webkit-padding-start: 0px;
+ }
+
  .jumbotron {
  	background: image-url('pizza_back.jpg');
-
  	.container {
  		background: rgba(255, 255, 255, 0.8);
  		padding: 20px 50px;
