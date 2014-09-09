@@ -102,7 +102,7 @@ As a fifth iteration the ability to sell printings
 
   * In the browser enter: [http://pizzagram.herokuapp.com/](http://pizzagram.herokuapp.com/)
 
-###How to test the application:
+###How to test the application (due to the lack of S3, Devise and base keys a number of tests will fail):
 
   * From command line enter:
 ```bash

@@ -25,7 +25,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'autoprefixer-rails'
 gem 'aws-sdk'
-gem 'devise'
+gem 'devise', '3.0.3'
 gem 'bootstrap-sass'
 gem 'heroku_secrets', github: 'alexpeattie/heroku_secrets'
 gem 'byebug'
