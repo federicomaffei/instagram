@@ -26,14 +26,15 @@
  .navbar-inverse {
  	background-color: #fff;
  	border-bottom-width: 0px;
- 	color: none;
  }
 
  .navbar-brand {
  	font-family: 'Lobster Two';
  	font-size: 27px;
- 	color: black;
+ }
 
+ .navbar-inverse .navbar-brand {
+ 	color: black;
  	&:hover {
  		color: black;
  	}
@@ -51,14 +52,14 @@
 
  .panel-body { 
  	img {
- 	max-width:100%
+ 		max-width:100%
  	}
  	p {
- 	margin-top: 20px;
-	}
-}
+ 		margin-top: 20px;
+ 	}
+ }
 
-.notice {
-	padding-top: 40px;
-}
+ .notice {
+ 	padding-top: 40px;
+ }
 
